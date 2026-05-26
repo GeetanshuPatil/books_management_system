@@ -28,7 +28,7 @@ This project uses MockAPI for performing CRUD operations.
 
 ## Live Demo
 
-Add your deployed URL here.
+https://books-management-system-omega.vercel.app/
 
 ## Author
 
