@@ -28,6 +28,17 @@ const BookForm = ({ onSubmit, editingBook, onCancelEdit }) => {
     });
   };
 
+  const handleCancelEdit = () => {
+    setFormData({
+      title: "",
+      author: "",
+      genre: "",
+      publicationYear: "",
+    });
+
+    onCancelEdit();
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -55,8 +66,8 @@ const BookForm = ({ onSubmit, editingBook, onCancelEdit }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-6 mb-8">
-      <h2 className="text-2xl font-bold mb-5 text-gray-800">
+    <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-lg p-6 mb-8 border border-white/60">
+      <h2 className="text-2xl font-bold mb-5 bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">
         {editingBook ? "Update Book" : "Add New Book"}
       </h2>
 
@@ -100,7 +111,7 @@ const BookForm = ({ onSubmit, editingBook, onCancelEdit }) => {
         <div className="md:col-span-2 flex gap-3">
           <button
             type="submit"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition"
+            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-2 rounded-lg font-medium transition shadow-md"
           >
             {editingBook ? "Update Book" : "Add Book"}
           </button>
@@ -108,8 +119,8 @@ const BookForm = ({ onSubmit, editingBook, onCancelEdit }) => {
           {editingBook && (
             <button
               type="button"
-              onClick={onCancelEdit}
-              className="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg font-medium transition"
+              onClick={handleCancelEdit}
+              className="bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-600 hover:to-gray-800 text-white px-6 py-2 rounded-lg font-medium transition shadow-md"
             >
               Cancel
             </button>

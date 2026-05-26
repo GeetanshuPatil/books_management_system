@@ -109,12 +109,12 @@ const Home = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
-      <header className="bg-blue-700 text-white py-6 shadow-md">
-        <h1 className="text-3xl md:text-4xl font-bold text-center">
+    <div className="min-h-screen bg-gradient-to-r from-slate-100 via-slate-300 to-slate-100 flex flex-col">
+      <header className="bg-gradient-to-r from-purple-700 via-blue-700 to-purple-700 text-white py-6 shadow-md">
+        <h1 className="text-3xl md:text-5xl font-bold text-center tracking-tight">
           Books Management System
         </h1>
-        <p className="text-center mt-2 text-blue-100">
+        <p className="text-center mt-3 text-blue-100 text-sm md:text-base">
           Add, update, delete, search and filter books
         </p>
       </header>
@@ -158,13 +158,13 @@ const Home = () => {
             ))}
           </div>
         ) : (
-          <div className="text-center bg-white rounded-xl shadow-md p-8">
+          <div className="text-center bg-white/90 backdrop-blur-md rounded-2xl shadow-lg p-8 border border-white/60">
             <p className="text-gray-600 text-lg">No books found.</p>
           </div>
         )}
       </main>
-      
-      <Footer/>
+
+      <Footer />
     </div>
   );
 };
